@@ -1,7 +1,7 @@
 Part 1 | Level Easy
 CPU Information:
 bash
-Copy code
+
 #!/bin/bash
 
 if [[ "$1" == "cpu" && "$2" == "getinfo" ]]; then
@@ -9,7 +9,7 @@ if [[ "$1" == "cpu" && "$2" == "getinfo" ]]; then
 fi
 Memory Information:
 bash
-Copy code
+
 #!/bin/bash
 
 if [[ "$1" == "memory" && "$2" == "getinfo" ]]; then
@@ -18,7 +18,7 @@ fi
 Part 2 | Level Intermediate
 Create User:
 bash
-Copy code
+
 #!/bin/bash
 
 if [[ "$1" == "user" && "$2" == "create" ]]; then
@@ -27,7 +27,7 @@ if [[ "$1" == "user" && "$2" == "create" ]]; then
 fi
 List Users:
 bash
-Copy code
+
 #!/bin/bash
 
 if [[ "$1" == "user" && "$2" == "list" ]]; then
@@ -40,7 +40,7 @@ fi
 Part 3 | Advanced Level
 File Information:
 bash
-Copy code
+
 #!/bin/bash
 
 if [[ "$1" == "file" && "$2" == "getinfo" ]]; then
