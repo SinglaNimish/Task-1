@@ -1,0 +1,73 @@
+internsctl Bash Script
+This example shows a basic structure for the script:
+
+bash
+Copy code
+#!/bin/bash
+
+# Function to display help/usage information
+display_help() {
+    echo "Usage: internsctl [options]"
+    echo "Options:"
+    echo "  --help       Display help"
+    echo "  --version    Show version information"
+    # Add more help information or examples here
+}
+
+# Function to display version information
+display_version() {
+    echo "internsctl v0.1.0"
+}
+
+# Main script logic
+case "$1" in
+    --help)
+        display_help
+        ;;
+    --version)
+        display_version
+        ;;
+    *)
+        # Handle other operations here based on customer requirements
+        echo "Performing operation based on the provided arguments: $@"
+        # Add relevant logic based on provided requirements
+        ;;
+esac
+Manual Page (Simplified Example)
+Here's a basic manual page content for internsctl:
+
+bash
+Copy code
+.TH INTERNSCTL 1 "November 2023" "internsctl v0.1.0"
+
+.SH NAME
+internsctl \- Custom Linux command for operations
+
+.SH SYNOPSIS
+.B internsctl
+[\fIOPTIONS\fP]
+
+.SH DESCRIPTION
+This command is designed to perform various operations as specified by the customer.
+
+.SH OPTIONS
+.TP
+.B --help
+Display usage information and help.
+
+.TP
+.B --version
+Display the current version of the command.
+
+.SH EXAMPLES
+.B internsctl --help
+Shows usage information.
+
+.B internsctl --version
+Shows the version of the command.
+
+.SH AUTHOR
+Written by nimishsingla88@gmail.com
+
+.SH REPORTING BUGS
+Report bugs to: nimishsingla88@gmail.com
