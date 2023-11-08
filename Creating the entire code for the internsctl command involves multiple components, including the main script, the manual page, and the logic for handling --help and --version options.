@@ -2,7 +2,7 @@ internsctl Bash Script
 This example shows a basic structure for the script:
 
 bash
-Copy code
+
 #!/bin/bash
 
 # Function to display help/usage information
@@ -37,7 +37,7 @@ Manual Page (Simplified Example)
 Here's a basic manual page content for internsctl:
 
 bash
-Copy code
+
 .TH INTERNSCTL 1 "November 2023" "internsctl v0.1.0"
 
 .SH NAME
