@@ -1,0 +1,60 @@
+Part 1 | Level Easy
+CPU Information:
+bash
+Copy code
+#!/bin/bash
+
+if [[ "$1" == "cpu" && "$2" == "getinfo" ]]; then
+    lscpu
+fi
+Memory Information:
+bash
+Copy code
+#!/bin/bash
+
+if [[ "$1" == "memory" && "$2" == "getinfo" ]]; then
+    free
+fi
+Part 2 | Level Intermediate
+Create User:
+bash
+Copy code
+#!/bin/bash
+
+if [[ "$1" == "user" && "$2" == "create" ]]; then
+    username="$3"
+    sudo adduser --disabled-password --gecos "" "$username"
+fi
+List Users:
+bash
+Copy code
+#!/bin/bash
+
+if [[ "$1" == "user" && "$2" == "list" ]]; then
+    if [[ "$3" == "--sudo-only" ]]; then
+        getent group sudo | cut -d: -f4 | tr ',' '\n'
+    else
+        getent passwd | cut -d: -f1
+    fi
+fi
+Part 3 | Advanced Level
+File Information:
+bash
+Copy code
+#!/bin/bash
+
+if [[ "$1" == "file" && "$2" == "getinfo" ]]; then
+    file_name="$3"
+
+    if [[ "$4" == "--size" || "$4" == "-s" ]]; then
+        stat -c "%s" "$file_name"
+    elif [[ "$4" == "--permissions" || "$4" == "-p" ]]; then
+        stat -c "%A" "$file_name"
+    elif [[ "$4" == "--owner" || "$4" == "-o" ]]; then
+        stat -c "%U" "$file_name"
+    elif [[ "$4" == "--last-modified" || "$4" == "-m" ]]; then
+        stat -c "%y" "$file_name"
+    else
+        echo "Invalid option. Available options: --size, --permissions, --owner, --last-modified"
+    fi
+fi
